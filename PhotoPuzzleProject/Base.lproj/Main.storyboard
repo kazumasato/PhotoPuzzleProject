@@ -230,7 +230,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LlC-EE-Ida" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2699" y="181"/>
+            <point key="canvasLocation" x="3012" y="94"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="qDc-ev-tHo">
@@ -315,17 +315,13 @@
                                     <rect key="frame" x="0.0" y="0.0" width="181" height="181"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Kq-LR-1A3">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fHW-m1-pTn">
                                             <rect key="frame" x="0.0" y="0.0" width="181" height="181"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        </view>
+                                        </imageView>
                                     </subviews>
                                 </view>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <connections>
-                                    <outlet property="puzzleImage" destination="4Kq-LR-1A3" id="teL-PB-uzI"/>
-                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -334,13 +330,10 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Puzzle" id="3Tz-JI-3LA"/>
-                    <connections>
-                        <outlet property="puzzleImage" destination="4Kq-LR-1A3" id="Dsl-b9-kpL"/>
-                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Wm-zv-l0D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3549" y="-220"/>
+            <point key="canvasLocation" x="3966.666666666667" y="-656.25"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vVX-fu-klV">

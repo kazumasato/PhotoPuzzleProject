@@ -37,17 +37,16 @@ class NextViewController: UIViewController {
 
     @IBAction func didClickStartButton(_ sender: UIButton) {
         if sender.tag == BTN_START {
-                    //シャッフルの実行(8)
-                          _shuffle = 20
-                          while _shuffle > 0 {
-                              if movePiece(tx: Int(arc4random_uniform(4)), ty: Int(arc4random_uniform(4))) {_shuffle -= 1}
-                          }
-                          for i in 0..<16 {
-                              let dx: CGFloat = 30+75*CGFloat(i%4)
-                              let dy: CGFloat = 180+75*CGFloat(i/4)
-                              _piece[_data[i]].frame =
-                                  CGRect(x: dx, y: dy, width: 75, height: 75)
-                          }
+//                    //シャッフルの実行(8)
+//                          _shuffle = 20
+//                          while _shuffle > 0 {
+//                              if movePiece(tx: Int(arc4random_uniform(4)), ty: Int(arc4random_uniform(4))) {_shuffle -= 1}
+//                          }
+//                          for i in 0..<16 {
+//                              let dx: CGFloat = 30+75*CGFloat(i%4)
+//                              let dy: CGFloat = 180+75*CGFloat(i/4)
+//                              _piece[_data[i]].frame =
+//                                  CGRect(x: dx, y: dy, width: 75, height: 75)
 
                     _piece[15].alpha = 0
 
@@ -56,10 +55,6 @@ class NextViewController: UIViewController {
     
 
     func makePieces(image: UIImage, divisor: CGFloat) -> [UIImage] {
-        
-        
-        
-        
         
         let pieceWidth = (image.size.width) / divisor
         let pieceHeight = (image.size.height) / divisor
@@ -80,7 +75,7 @@ class NextViewController: UIViewController {
     }
     func createPuzzle(image: UIImage, divisor: CGFloat) {
         var pieces = makePieces(image: image, divisor: divisor)
-//        pieces.shuffle()
+        pieces.shuffle()
         let maxCount = Int(divisor) * Int(divisor)
         
         let pieceWidth = (image.size.width) / divisor

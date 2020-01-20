@@ -127,7 +127,7 @@ var puzzle = [ Puzzle(title: "Pikachu", solvedImages: ["pikachuLeftFace","pikach
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ImageCollectionViewCell
-            cell.puzzleImage.image = UIImage(named: puzzle[index].unsolvedImages[indexPath.item])
+//            cell.puzzleImage.image = UIImage(named: puzzle[index].unsolvedImages[indexPath.item])
         return cell
     }
 
