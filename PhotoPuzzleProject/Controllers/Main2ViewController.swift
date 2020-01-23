@@ -10,12 +10,12 @@ import UIKit
 
 class PuzzleCollectionViewController: UICollectionViewController {
     
-    @IBOutlet weak var puzzleImage: UIView!
+
     
-    var selectedImage :UIImage!
+//    var selectedImage :UIImage!
     
     
-    let DIVISOR = CGFloat(4)
+//    let DIVISOR = CGFloat(4)
     
 var puzzle = [ Puzzle(title: "Pikachu", solvedImages: ["pikachuLeftFace","pikachuRightFace","pikachuLeftBody","pikachuRightBody"]),
               Puzzle(title: "Charuzard", solvedImages: ["charuzardLeftWing","charuzardNeck","charuzardRightWing","charuzardFace","charuzardBody",
@@ -30,9 +30,9 @@ var puzzle = [ Puzzle(title: "Pikachu", solvedImages: ["pikachuLeftFace","pikach
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var image = selectedImage!.resized(toWidth: 300)
-        
-        createPuzzle(image: image!, divisor: DIVISOR)
+//        var image = selectedImage!.resized(toWidth: 300)
+//
+//        createPuzzle(image: image!, divisor: DIVISOR)
         
         let hintBarbutton = UIBarButtonItem(title: "Hint", style: .plain, target: self, action: #selector(showHintImage))
         navigationItem.leftBarButtonItem = hintBarbutton
@@ -46,47 +46,47 @@ var puzzle = [ Puzzle(title: "Pikachu", solvedImages: ["pikachuLeftFace","pikach
         collectionView.dropDelegate = self
     }
     
-     func makePieces(image: UIImage, divisor: CGFloat) -> [UIImage] {
-            
-            
-            
-            
-            
-            let pieceWidth = (image.size.width) / divisor
-            let pieceHeight = (image.size.height) / divisor
-            
-            var pieces: [UIImage] = []
-            
-            for i in 0..<Int(divisor) {
-                
-                for j in 0..<Int(divisor) {
-                    let piece = image.cropToRect(rect: CGRect(x: CGFloat(i) * pieceWidth, y: CGFloat(j) * pieceHeight, width: pieceWidth, height: pieceHeight))
-                    
-                    pieces.append(piece!)
-                }
-            }
-            
-            return pieces
-            
-        }
-        func createPuzzle(image: UIImage, divisor: CGFloat) {
-            var pieces = makePieces(image: image, divisor: divisor)
-    //        pieces.shuffle()
-            let maxCount = Int(divisor) * Int(divisor)
-            
-            let pieceWidth = (image.size.width) / divisor
-            let pieceHeight = (image.size.height) / divisor
-            
-            for i in 0..<maxCount {
-                var piece = pieces[i]
-                let x = i / Int(divisor)
-                let y = i % Int(divisor)
-                
-                let imageView = UIImageView(image: piece)
-                imageView.frame = CGRect(x: CGFloat(x) * pieceWidth, y: CGFloat(y) * pieceHeight, width: pieceWidth, height: pieceHeight)
-                puzzleImage.addSubview(imageView)
-            }
-        }
+//     func makePieces(image: UIImage, divisor: CGFloat) -> [UIImage] {
+//
+//
+//
+//
+//
+//            let pieceWidth = (image.size.width) / divisor
+//            let pieceHeight = (image.size.height) / divisor
+//
+//            var pieces: [UIImage] = []
+//
+//            for i in 0..<Int(divisor) {
+//
+//                for j in 0..<Int(divisor) {
+//                    let piece = image.cropToRect(rect: CGRect(x: CGFloat(i) * pieceWidth, y: CGFloat(j) * pieceHeight, width: pieceWidth, height: pieceHeight))
+//
+//                    pieces.append(piece!)
+//                }
+//            }
+//
+//            return pieces
+//
+//        }
+//        func createPuzzle(image: UIImage, divisor: CGFloat) {
+//            var pieces = makePieces(image: image, divisor: divisor)
+//    //        pieces.shuffle()
+//            let maxCount = Int(divisor) * Int(divisor)
+//
+//            let pieceWidth = (image.size.width) / divisor
+//            let pieceHeight = (image.size.height) / divisor
+//
+//            for i in 0..<maxCount {
+//                var piece = pieces[i]
+//                let x = i / Int(divisor)
+//                let y = i % Int(divisor)
+//
+//                let imageView = UIImageView(image: piece)
+//                imageView.frame = CGRect(x: CGFloat(x) * pieceWidth, y: CGFloat(y) * pieceHeight, width: pieceWidth, height: pieceHeight)
+//                puzzleImage.addSubview(imageView)
+//            }
+//        }
 
     @objc func showHintImage() {
         hintImage.image = UIImage(named: self.puzzle[index].title)

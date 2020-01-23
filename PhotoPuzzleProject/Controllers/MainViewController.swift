@@ -72,10 +72,11 @@ class MainViewController: UIViewController,UIImagePickerControllerDelegate,UINav
 
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? NextViewController {
-//            let image = [UIImagePickerController.InfoKey.originalImage] as? UIImage
-            vc.selectedImage = imageView.image
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if let vc = segue.destination as? NextViewController {
+    //            let image = [UIImagePickerController.InfoKey.originalImage] as? UIImage
+                vc.selectedImage = imageView.image
+            }
         }
-    }
+
 }

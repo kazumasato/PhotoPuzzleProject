@@ -177,7 +177,7 @@
                     <navigationItem key="navigationItem" id="VFj-tR-yWr"/>
                     <connections>
                         <outlet property="imageView" destination="zgm-Rh-6Xr" id="YO3-ZD-cfQ"/>
-                        <segue destination="TGq-uL-dGm" kind="show" identifier="toNext" id="7FE-BY-bCI"/>
+                        <segue destination="TGq-uL-dGm" kind="show" identifier="toNext" id="xPe-oX-CfC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zkp-S1-cvP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -191,46 +191,14 @@
                     <view key="view" contentMode="scaleToFill" id="Pn4-f5-qFQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.image" translatesAutoresizingMaskIntoConstraints="NO" id="TyQ-fQ-xnN">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gu8-qN-Kxm">
-                                <rect key="frame" x="0.0" y="143" width="414" height="400"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yz2-Iz-0f3">
-                                <rect key="frame" x="154" y="63" width="107" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NXt-GI-R67">
-                                <rect key="frame" x="150" y="686" width="114" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <state key="normal" title="スタート">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="didClickStartButton:" destination="TGq-uL-dGm" eventType="touchUpInside" id="6a3-BS-rCm"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="3Ad-q5-7dx"/>
                     </view>
                     <navigationItem key="navigationItem" id="PGG-Ej-JFz"/>
-                    <connections>
-                        <outlet property="puzzleView" destination="Gu8-qN-Kxm" id="fz4-n2-TKI"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LlC-EE-Ida" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3012" y="94"/>
+            <point key="canvasLocation" x="3048" y="94"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="qDc-ev-tHo">
@@ -296,7 +264,7 @@
         <!--Puzzle-->
         <scene sceneID="gxZ-7k-BOh">
             <objects>
-                <collectionViewController modalPresentationStyle="fullScreen" id="Wjr-Iw-333" customClass="Main2ViewController" customModule="PhotoPuzzleProject" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController modalPresentationStyle="fullScreen" id="Wjr-Iw-333" customClass="Main2ViewController" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Q7M-9Z-JVC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -315,13 +283,16 @@
                                     <rect key="frame" x="0.0" y="0.0" width="181" height="181"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fHW-m1-pTn">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sec-rt-RZV">
                                             <rect key="frame" x="0.0" y="0.0" width="181" height="181"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                     </subviews>
                                 </view>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="puzzleImage" destination="Sec-rt-RZV" id="KFm-ZO-nJi"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -333,26 +304,26 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Wm-zv-l0D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3966.666666666667" y="-656.25"/>
+            <point key="canvasLocation" x="5811.594202898551" y="93.75"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="vVX-fu-klV">
+        <scene sceneID="tda-SA-0Zc">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="Fzw-Ry-f0y" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="6sZ-i6-T0q" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="2iO-G5-HlU"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Bob-Ke-Qud">
+                    <navigationItem key="navigationItem" id="phe-lk-Sof"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yQS-Vy-9YD">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Wjr-Iw-333" kind="relationship" relationship="rootViewController" id="1rp-ee-gme"/>
+                        <segue destination="Wjr-Iw-333" kind="relationship" relationship="rootViewController" id="dRG-oe-V6I"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Jx8-hM-yGV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jSj-Nu-a4v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2919" y="-655"/>
+            <point key="canvasLocation" x="4770" y="94"/>
         </scene>
     </scenes>
     <resources>
